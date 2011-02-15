@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * Implementation of hook_schema().
+ * @return array of Schema API table definitions.
+ */
+function openattribute_schema() {
+  $schema['openattribute'] = array(
+    'description' => t('Map nodes with license.'),
+    'fields' => array(
+      'nid' => array(
+        'description' => t('Node identifier.'),
+        'type' => 'inc',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'license' => array(
+        'description' => t('Node license'),
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length' => 60,
+        'default' => '',
+      ),
+    'primary key' => array('nid'),
+  );
+  return $schema;
+}
+
+/**
+ * Implementation of hook_install().
+ */
+function openattribute_install() {
+  drupal_install_schema('openattribute');
+  db_query("DELETE FROM {cache}");
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function openattribute_uninstall() {
+  drupal_uninstall_schema('openattribute');
+}
+

@@ -1,0 +1,4 @@
+name = OpenAttribute
+description = Displays license and attribution information for Creative Commons licensed content.
+package = Licenses
+core = 6.x

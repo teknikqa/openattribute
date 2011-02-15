@@ -1,7 +1,7 @@
 OpenAttribute for Drupal
 =========================
 
-OpenAttribute for Drupal adds support for displaying license and
-attribution information for works on your site.
-This module allows users to select and assign a license to a node
-and any attached content, or to the entire site.
+OpenAttribute for Drupal adds support for displaying license
+and attribution information for works on your site.
+This module allows users to select and assign a Creative Commons
+license to a node and any attached content, or to the entire site.
